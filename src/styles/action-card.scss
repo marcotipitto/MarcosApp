@@ -1,0 +1,40 @@
+.action-card-container {
+    width: 100%;
+    margin: var(--app-spacing) 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    .action-card {
+        border-radius: 3rem;
+        box-shadow: var(--app-box-shadow);
+        border: 3px solid #000000;
+        display: inline-flex;
+        align-items: center;
+        overflow: hidden;
+        width: auto;
+        height: 5rem;
+        -webkit-transition: max-width 0.5s;
+        transition: max-width 0.5s;
+        cursor: pointer;
+
+        .action-card-icon {
+            height: 2.5rem;
+            width: 2.5rem;
+            padding: 0px 0px 0px 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .action-card-text {
+            font-family: 'VCR Mono';
+            white-space: nowrap;
+            padding-right: 15px;
+            margin-left: 5px;
+        }
+    }
+
+    .action-card:hover {
+        max-width: 200px;
+    }
+}

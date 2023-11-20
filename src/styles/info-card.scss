@@ -1,0 +1,27 @@
+// .single-card {
+//     max-width: 85rem;
+// }
+
+.info-card {
+    margin: var(--app-spacing);
+
+    .info-card-header-container {
+        display: flex;
+        align-items: center;
+
+        .card-image {
+            width: 6rem;
+            height: auto;
+            margin: var(--app-spacing) 
+                var(--app-spacing-2) ;
+        }
+
+        .info-card-header {
+            margin: var(--app-spacing);
+        }
+    }
+    
+    .description {
+        margin: var(--app-spacing-2);
+    }
+}

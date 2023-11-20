@@ -1,0 +1,17 @@
+@import './fonts.scss';
+
+.title-container {
+    margin-top: var(--app-spacing);
+    // display: flex;
+    // align-items: flex-start;
+
+    .name-container {
+        // text-align: center;
+        margin-right: 5px;
+    }
+
+    .name {
+        font-family: 'Compact Disk Fill'
+    }
+}
+

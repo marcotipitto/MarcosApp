@@ -1,0 +1,51 @@
+@import './variables.scss';
+@import './fonts.scss';
+
+html { font-size: 62.5%; } 
+
+.App {
+  background-image: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  padding: calc(var(--app-spacing) * 3);
+  font-size: 16px;
+  background-attachment: fixed;
+
+  * {
+    max-width: 1500px;
+    margin: auto;
+  }
+
+}
+
+.title {
+  margin-top: 25px;
+  font-size: 5rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.title-fill {
+  font-family: 'Compact Disc Fill';
+  font-size: 7rem;
+}
+
+.title-outline {
+  font-family: 'Compact Disc Outline';
+}
+
+.card {
+  background-color: white;
+  flex-grow: 1;
+  flex: 1 0 100%;
+  min-width: 30rem;
+  border-radius: var(--app-border-radius);
+  box-shadow: var(--app-box-shadow);
+}
+
+@media (min-width: 1000px) {
+  .card {
+    flex: 1 0 calc(50% - 20px);
+  }
+}

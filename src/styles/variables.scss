@@ -1,0 +1,14 @@
+:root {
+    --app-border-radius: 5px;
+    --app-box-shadow: 
+        rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    --app-spacing: 1rem;
+    --app-spacing-2: calc(var(--app-spacing) * 2);
+    --app-spacing-3: calc(var(--app-spacing) * 3);
+    --app-spacing-4: calc(var(--app-spacing) * 4);
+    --app-spacing-5: calc(var(--app-spacing) * 5);
+}

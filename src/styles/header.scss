@@ -1,0 +1,19 @@
+.header {
+    max-width: 800px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    align-content: center;
+
+    .profile-pic {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 30rem;
+        box-shadow: var(--app-box-shadow);
+        border: 3px solid #000000;
+    }
+
+}
+
+

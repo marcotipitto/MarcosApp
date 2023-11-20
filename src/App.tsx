@@ -1,26 +1,62 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import './styles/app.scss';
+import './styles/fonts.scss';
+import { Section, Header } from './components';
+import { experienceData,  educationData, introData } from './data';
+import { SectionProps } from './models';
 
-function App() {
+const App = () => {
+
+  const [sections, setSections] = useState<SectionProps[]>([])
+
+  useEffect(() => {
+    const requestOptions = {
+      method: 'GET',
+      headers: {
+        "Content-Type":"application/json"
+      }
+    }
+    fetch('http://localhost:3001/api/v1/sectionInfo', requestOptions)
+      .then(response => response.json())
+      .then((response: SectionProps[]) => {
+        response = response.sort((a, b) => a.priority - b.priority);
+        console.log('sectionInfo Response: ', response);
+        setSections(response);
+      })
+      .catch((error) => console.error(error))
+  }, [setSections])
+
+  console.log(`
+       .--'''''''''--.
+    .'      .---.      '.
+   /    .-----------.    \\
+  /        .-----.        \\
+  |       .-.   .-.       |
+  |      /   \\ /   \\      |
+   \\    | .-. | .-. |    /
+    '-._| | | | | | |_.-'
+        | '-' | '-' |    What are you looking at?
+         \\___/ \\___/
+      _.-'  /   \\  \`-._
+    .' _.--|     |--._ '.
+    ' _...-|     |-..._ '
+           |     |
+           '.___.' 
+  `)
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      { sections && (
+        sections.map((section: SectionProps, index: number) => 
+          <Section {...section} key={index}/>
+        )
+      )}
+      <Section {...introData}/>
+      <Section {...experienceData}/>
+      <Section {...educationData}/>
     </div>
   );
-}
+};
 
 export default App;

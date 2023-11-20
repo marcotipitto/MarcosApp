@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Compact Disc Outline';
+    src: url('../../public/fonts/CompactDiscoRegular-EaR9n.ttf');
+}
+  
+@font-face {
+    font-family: 'Compact Disc Fill';
+    src: url('../../public/fonts/CompactDiscoFill-OV7w4.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat Alternate';
+    src: url('../../public/fonts/MontserratAlternates-Medium.ttf')
+}
+
+@font-face {
+    font-family: 'VCR Mono';
+    src: url('../../public/fonts/VcrMono.ttf')
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../../public/fonts/Raleway-VariableFont_wght.ttf')
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../public/fonts/Roboto-Regular.ttf')
+}
+
+h1 {
+    font-family: 'VCR Mono';
+    font-size: 3rem;
+    margin: 0;
+}
+  
+h2 {
+    font-family: 'Roboto';
+    font-size: 2rem;
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+    margin: 0;
+}
+  
+p, li {
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+    margin: 0;
+}

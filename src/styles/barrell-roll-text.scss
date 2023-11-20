@@ -1,0 +1,13 @@
+.roll {
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 0.5s;
+}
+
+.forward {
+    transform: rotateX(360deg);
+}
+
+.backward {
+    transform: rotateX(-360deg);
+}

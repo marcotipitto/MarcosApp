@@ -1,0 +1,12 @@
+.section-headline {
+    border-bottom: black solid 2px;
+    margin: var(--app-spacing) 0;
+    padding-left: 6%;
+}
+
+.card-container {
+    display: flex;
+    // justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
